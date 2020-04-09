@@ -63,6 +63,7 @@ class LeftContainer extends React.Component{
 }
 
 class RightContainer extends React.Component{
+    // eslint-disable-next-line
     constructor(props){
         super(props);    
     }
