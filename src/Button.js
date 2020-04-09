@@ -1,4 +1,3 @@
-/* eslint-disable no-useless-constructor */
 import React from 'react';
 
 class Button extends React.Component{
@@ -16,7 +15,13 @@ class Button extends React.Component{
                 }}
                 id = {this.props.id} 
                 className = "drum-pad">
-                    <audio ref={this.audio} title={this.props.id} id={this.props.children} src={this.props.zvuk} className='clip'></audio>
+                    <audio 
+                        ref={this.audio} 
+                        title={this.props.id} 
+                        id={this.props.children} 
+                        src={this.props.zvuk} 
+                        className='clip'>
+                    </audio>
                     {this.props.children}
             </button>
         );

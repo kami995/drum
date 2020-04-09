@@ -1,4 +1,4 @@
-/* eslint-disable no-useless-constructor */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
@@ -10,7 +10,6 @@ class Wrapper extends React.Component{
         this.state = {
             text: ''
         }
-
         this.callback = this.callback.bind(this);
     }
 
@@ -46,17 +45,17 @@ class LeftContainer extends React.Component{
     render(){  
         return(
             <div id="left-container">
-                <Button playSound={this.playSound} sendToParent={this.sendToParent} id="Crash1" zvuk="/sounds/Crash1.wav">Q</Button>
-                <Button playSound={this.playSound} sendToParent={this.sendToParent} id="Crash2" zvuk="/sounds/Crash2.wav">W</Button>
-                <Button playSound={this.playSound} sendToParent={this.sendToParent} id="Crash3" zvuk="/sounds/Crash3.wav">E</Button>
+                <Button playSound={this.playSound} sendToParent={this.sendToParent} id="Heater 1" zvuk="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3">Q</Button>
+                <Button playSound={this.playSound} sendToParent={this.sendToParent} id="Heater 2" zvuk="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3">W</Button>
+                <Button playSound={this.playSound} sendToParent={this.sendToParent} id="Heater 3" zvuk="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3">E</Button>
 
-                <Button playSound={this.playSound} sendToParent={this.sendToParent} id="Snare1" zvuk="/sounds/Snare1.wav">A</Button>
-                <Button playSound={this.playSound} sendToParent={this.sendToParent} id="Kick1" zvuk="/sounds/Kick1.wav">S</Button>
-                <Button playSound={this.playSound} sendToParent={this.sendToParent} id="Kick2" zvuk="/sounds/Kick2.wav">D</Button>
+                <Button playSound={this.playSound} sendToParent={this.sendToParent} id="Heater 4" zvuk="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3">A</Button>
+                <Button playSound={this.playSound} sendToParent={this.sendToParent} id="Heater 5" zvuk="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3">S</Button>
+                <Button playSound={this.playSound} sendToParent={this.sendToParent} id="Hihat valjda" zvuk="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3">D</Button>
 
-                <Button playSound={this.playSound} sendToParent={this.sendToParent} id="Electro" zvuk="/sounds/Electro.wav">Z</Button>
-                <Button playSound={this.playSound} sendToParent={this.sendToParent} id="Hihat1" zvuk="/sounds/Hihat1.wav">X</Button>
-                <Button playSound={this.playSound} sendToParent={this.sendToParent} id="Hihat2" zvuk="/sounds/Hihat2.wav">C</Button>
+                <Button playSound={this.playSound} sendToParent={this.sendToParent} id="Kick" zvuk="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3">Z</Button>
+                <Button playSound={this.playSound} sendToParent={this.sendToParent} id="Kick 2" zvuk="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3">X</Button>
+                <Button playSound={this.playSound} sendToParent={this.sendToParent} id="Hihat2" zvuk="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3">C</Button>
             </div>
         );
     }
@@ -85,6 +84,7 @@ document.addEventListener('keydown', (e) => {
     if(audio){
         audio.play();
         document.getElementById('display').innerText = (audio.title);
+        console.log(audio);
     }
 });
 
